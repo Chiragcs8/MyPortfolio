@@ -22,12 +22,12 @@ export default function Portfolio() {
       <a className="skip" href="#work">Skip to projects</a>
       <header className="site">
         <div className="wrap nav">
-          <a className="brand" href="#top" data-b>{profile.name}</a>
+          <a className="brand" href="#top" data-b data-type>{profile.name}</a>
           <nav aria-label="Primary">
-            <a href="#work" data-b>Work</a>
-            <a href="#experience" data-b>Experience</a>
-            <a href="#about" data-b>About</a>
-            <a href="#contact" className="navcta" data-b>Get in touch <Icon name="arrow-up-right" /></a>
+            <a href="#work" data-b data-type>Work</a>
+            <a href="#experience" data-b data-type>Experience</a>
+            <a href="#about" data-b data-type>About</a>
+            <a href="#contact" className="navcta" data-b data-type>Get in touch <Icon name="arrow-up-right" /></a>
             <ThemeToggle />
           </nav>
         </div>
@@ -37,15 +37,15 @@ export default function Portfolio() {
         <div className="wrap">
           <section className="hero" aria-labelledby="hero-heading">
             <div className="hero-copy">
-              <h1 id="hero-heading">I’m {profile.name}. I build for the web.</h1>
-              <div className="hero-meta" data-b><span>{profile.role}</span><span>{profile.location}</span></div>
-              <p className="lead">{profile.intro} You can also find me online as {profile.handle}.</p>
+              <h1 id="hero-heading" data-b data-type>I’m {profile.name}. I build for the web.</h1>
+              <div className="hero-meta" data-b><span data-type>{profile.role}</span><span data-type>{profile.location}</span></div>
+              <p className="lead" data-b data-type>{profile.intro} You can also find me online as {profile.handle}.</p>
               <div className="cta-row">
-                <a className="btn primary" href="#work" data-b>See my work <Icon name="arrow-down" /></a>
-                <a className="btn secondary" href={'mailto:' + profile.email} data-b>Email me <Icon name="mail" /></a>
+                <a className="btn primary" href="#work" data-b data-type>See my work <Icon name="arrow-down" /></a>
+                <a className="btn secondary" href={'mailto:' + profile.email} data-b data-type>Email me <Icon name="mail" /></a>
               </div>
               <div className="chips" aria-label="Primary technologies" data-b>
-                {['React', 'Next.js', 'Node.js', 'TypeScript', 'MongoDB', 'PostgreSQL'].map((t) => <span key={t}>{t}</span>)}
+                {['React', 'Next.js', 'Node.js', 'TypeScript', 'MongoDB', 'PostgreSQL'].map((t) => <span key={t} data-type>{t}</span>)}
               </div>
             </div>
             <aside className="hero-art" aria-label="Developer profile" data-b>
@@ -58,7 +58,7 @@ export default function Portfolio() {
                   <div className="row"><dt>Education</dt><dd data-type>BE in IT, completed</dd></div>
                 </dl>
               </div>
-              <a className="workspace-footer" data-build-part href={profile.github} target="_blank" rel="noopener noreferrer"><Icon name="code" />Code on GitHub<Icon name="arrow-up-right" /></a>
+              <a className="workspace-footer" data-build-part data-type href={profile.github} target="_blank" rel="noopener noreferrer"><Icon name="code" />Code on GitHub<Icon name="arrow-up-right" /></a>
             </aside>
           </section>
 

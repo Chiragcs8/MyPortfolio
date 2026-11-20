@@ -37,7 +37,10 @@ try {
     scrollTo({ top: 0, left: 0, behavior: 'instant' });
     addEventListener('pageshow', () => scrollTo({ top: 0, left: 0, behavior: 'instant' }), { once: true });
   }
-  if (!matchMedia('(prefers-reduced-motion: reduce)').matches) document.documentElement.classList.add('swarm');
+  if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.documentElement.classList.add('swarm');
+    window.__swarmFallback = setTimeout(() => document.documentElement.classList.remove('swarm'), 8000);
+  }
 } catch {}
 `;
 

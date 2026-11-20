@@ -287,7 +287,7 @@ header.site {
   line-height: 1.7;
   color: var(--quiet);
 }
-.hero-meta span:first-child {
+.hero-meta > span:first-child {
   color: var(--ink);
   font-weight: 600;
 }
@@ -344,16 +344,16 @@ header.site {
   font-size: 12px;
   font-weight: 550;
 }
-.chips span {
+.chips > span {
   white-space: nowrap;
 }
-.chips span:nth-child(3n + 1) {
+.chips > span:nth-child(3n + 1) {
   color: var(--blue);
 }
-.chips span:nth-child(3n + 2) {
+.chips > span:nth-child(3n + 2) {
   color: var(--amber);
 }
-.chips span:nth-child(3n) {
+.chips > span:nth-child(3n) {
   color: var(--plum);
 }
 .hero-art {
@@ -821,6 +821,7 @@ footer.site .icon {
   position: fixed;
   z-index: 96;
 }
+.swarm :is(header.site, .hero) [data-b]:not(.built),
 .swarm [data-building]:not(.built) {
   visibility: hidden;
 }
